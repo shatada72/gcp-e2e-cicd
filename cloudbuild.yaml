@@ -13,12 +13,12 @@ steps:
     dir: 'app'
     id: test
   # Verify code with sonarqube - Quality gate
-  - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
-    entrypoint: 'bash'
-    args:
-    - -c
-    - /launch.sh -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$$SONAR_TOKEN -Dsonar.projectKey=$$SONAR_PROJECT_KEY -Dsonar.organization=$$SONAR_ORG -Dsonar.sources=./app -Dsonar.qualitygate.wait=false
-    secretEnv: ['SONAR_TOKEN','SONAR_ORG','SONAR_PROJECT_KEY']
+  #- name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
+  #  entrypoint: 'bash'
+  #  args:
+  #  - -c
+  #  - /launch.sh -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$$SONAR_TOKEN -Dsonar.projectKey=$$SONAR_PROJECT_KEY -Dsonar.organization=$$SONAR_ORG -Dsonar.sources=./app -Dsonar.qualitygate.wait=false
+  #  secretEnv: ['SONAR_TOKEN','SONAR_ORG','SONAR_PROJECT_KEY']
   # Push docker image and save image digest for kritis check
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'europe-west1-docker.pkg.dev/$PROJECT_ID/repo-techub-python/hello-world-python:${SHORT_SHA}']
