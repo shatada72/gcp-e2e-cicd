@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-python
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello-world-python
+        env:
+          - name: SITE_NAME
+            value: "Population Stats Dev"
+          - name: DEV_EXT_IP
+            value: "97.113.223.41"
