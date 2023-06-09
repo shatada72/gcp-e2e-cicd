@@ -22,7 +22,7 @@ metadata:
   name: test
 description: test cluster
 gke:
-  cluster: projects/techub-demos-host/locations/europe-west1-b/clusters/testcluster
+  cluster: projects/techub-demos-sidney/locations/europe-west1-b/clusters/testcluster
 ---
 
 apiVersion: deploy.cloud.google.com/v1beta1
@@ -31,7 +31,7 @@ metadata:
   name: staging
 description: staging cluster
 gke:
-  cluster: projects/techub-demos-host/locations/europe-west1-b/clusters/stagingcluster 
+  cluster: projects/techub-demos-sidney/locations/europe-west1-b/clusters/stagingcluster 
 ---
 
 apiVersion: deploy.cloud.google.com/v1beta1
@@ -41,4 +41,4 @@ metadata:
 description: prod cluster
 requireApproval: true
 gke:
-  cluster: projects/techub-demos-host/locations/europe-west1-b/clusters/prodcluster
+  cluster: projects/techub-demos-sidney/locations/europe-west1-b/clusters/prodcluster
