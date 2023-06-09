@@ -7,11 +7,11 @@ steps:
     dir: 'app'  
     id: build
   # Run unit tests
-  #- name: europe-west1-docker.pkg.dev/$PROJECT_ID/repo-techub-python/hello-world-python
-  #  entrypoint: python
-  #  args: ["-m","pytest","unit_tests.py"]
-  #  dir: 'app'
-  #  id: test
+  - name: europe-west1-docker.pkg.dev/$PROJECT_ID/repo-techub-python/hello-world-python
+    entrypoint: python
+    args: ["-m","pytest","unit_tests.py"]
+    dir: 'app'
+    id: test
   # Verify code with sonarqube - Quality gate
   #- name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
   #  entrypoint: 'bash'
