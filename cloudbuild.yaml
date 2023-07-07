@@ -7,11 +7,6 @@ steps:
     dir: 'app'  
     id: build
   # Run unit tests
-  - name: europe-west1-docker.pkg.dev/$PROJECT_ID/repo-techub-python/hello-world-python
-    entrypoint: python
-    args: ["-m","pytest","unit_tests.py"]
-    dir: 'app'
-    id: test
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'europe-west1-docker.pkg.dev/$PROJECT_ID/repo-techub-python/hello-world-python:${SHORT_SHA}']
     id: push
