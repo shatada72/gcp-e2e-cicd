@@ -4,11 +4,11 @@ metadata:
   name: hello-world-python
 spec:
   minReplicas: 1
-  maxReplicas: 10
+  maxReplicas: 5
   metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 50
+        averageUtilization: 40
