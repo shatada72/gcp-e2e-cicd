@@ -23,7 +23,7 @@ steps:
       [
         "beta", "deploy", "releases", "create", "rel-${SHORT_SHA}",
         "--delivery-pipeline", "demo-btyysro",
-        "--region", "europe-west1",
+        "--region", "southamerica-east1",
         "--annotations", "commitId=${REVISION_ID}",
         "--images", "hello-world-python=europe-west1-docker.pkg.dev/$PROJECT_ID/repo-techub-python/hello-world-python:${SHORT_SHA}"
       ]
