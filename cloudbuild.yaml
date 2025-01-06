@@ -1,3 +1,4 @@
+
 # To build and deploy to Cloud Run, run from this directory:
 # $ gcloud builds submit app --config=cloudbuild.yaml 
 steps:
@@ -22,9 +23,8 @@ steps:
     args: 
       [
         "beta", "deploy", "releases", "create", "rel-${SHORT_SHA}",
-        "--delivery-pipeline", "hello-world-python-pipeline",
+        "--delivery-pipeline", "demo-btyysro",
         "--region", "europe-west1",
         "--annotations", "commitId=${REVISION_ID}",
         "--images", "hello-world-python=europe-west1-docker.pkg.dev/$PROJECT_ID/repo-techub-python/hello-world-python:${SHORT_SHA}"
       ]
-
