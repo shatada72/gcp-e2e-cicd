@@ -13,7 +13,7 @@ steps:
     dir: 'app'
     id: test
   # Verify code with sonarqube - Quality gate
-  - name: 'us-central1-docker.pkg.dev/$PROJECT_ID/sonar-scanner:latest'
+  - name: 'us-central1-docker.pkg.dev/$PROJECT_ID/sonar-scanner/sonar-scanner:latest'
     entrypoint: 'bash'
     args:
     - -c
